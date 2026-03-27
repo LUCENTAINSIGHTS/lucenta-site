@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
-const logoSrc = "data:image/webp;base64,UklGRhgDAABXRUJQVlA4IAwDAACQFgCdASqgAKAAPm02mEgkIyUhJXeIsKANiWdu4EGvAHf0oEDbCgCcMDMoF/myuRfldk4gGlmYnRqS/ERximoL/MYuElfQ4RNHWmbi5xc2m4GQaXzmaog1RG++rFuKAdGpjhuwhNzCbD3b5DgDdCEWOqCDWKMyZqbA/duU4oqKAyCeCIIjWNZb1azq6L+v7Le3aFXO0ejZcG4CjD3Kd1iSH0n4m9H+qI0kx9Gk5N+Q8GGWrDBtwF0XEN/9tv2Cp2dK6EmmQ3N8x7P0uz3AH2bUjv5w3an6fu2VghkQ2jC+W0E11qoP6T2b8aK3Gv3+WLm6NTbP1y13QnR35dYd9RqjKDM4Xg8b6J0L3r6EL7k9IX4uD+5P7bQkKp3Q0FQvNtz8pu9j5Yk2q7x7mBEkM5nXviK+PqHwvjPyLckz7dZPlkfd0yUGN92gPjCYqwvUeM+PfsH9Y8n6J0o1cgQjG1nDpuP7Vas0z0uf7bL8UAwAA";
+const logoSrc =
+  "data:image/webp;base64,UklGRhgDAABXRUJQVlA4IAwDAACQFgCdASqgAKAAPm02mEgkIyUhJXeIsKANiWdu4EGvAHf0oEDbCgCcMDMoF/myuRfldk4gGlmYnRqS/ERximoL/MYuElfQ4RNHWmbi5xc2m4GQaXzmaog1RG++rFuKAdGpjhuwhNzCbD3b5DgDdCEWOqCDWKMyZqbA/duU4oqKAyCeCIIjWNZb1azq6L+v7Le3aFXO0ejZcG4CjD3Kd1iSH0n4m9H+qI0kx9Gk5N+Q8GGWrDBtwF0XEN/9tv2Cp2dK6EmmQ3N8x7P0uz3AH2bUjv5w3an6fu2VghkQ2jC+W0E11qoP6T2b8aK3Gv3+WLm6NTbP1y13QnR35dYd9RqjKDM4Xg8b6J0L3r6EL7k9IX4uD+5P7bQkKp3Q0FQvNtz8pu9j5Yk2q7x7mBEkM5nXviK+PqHwvjPyLckz7dZPlkfd0yUGN92gPjCYqwvUeM+PfsH9Y8n6J0o1cgQjG1nDpuP7Vas0z0uf7bL8UAwAA";
 
 const copy = {
   en: {
@@ -355,6 +356,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0f1722] text-white selection:bg-white selection:text-black">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_30%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(125,211,252,0.10),transparent_36%)]" />
+
       <div className="relative mx-auto max-w-7xl px-6 py-6 sm:px-8 lg:px-10">
         <header className="flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
@@ -476,7 +478,10 @@ export default function App() {
                     <div className="text-xs uppercase tracking-[0.22em] text-white/40">{t.outputs}</div>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {service.deliverables.map((item) => (
-                        <span key={item} className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-sm text-white/75">
+                        <span
+                          key={item}
+                          className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-sm text-white/75"
+                        >
                           {item}
                         </span>
                       ))}
